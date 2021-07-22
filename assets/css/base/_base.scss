@@ -15,16 +15,12 @@ html {
   @include respond(lg) {
     font-size: 56.25%;
   }
-
-  // 1rem = 8px
-  @include respond(sm) {
-    font-size: 50%;
-  }
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
   box-sizing: border-box;
+  font-size: 1.6rem;
 }
 
 button,

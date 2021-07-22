@@ -1,0 +1,15 @@
+.bgChip {
+  color: var(--light-color);
+
+  &--at-t {
+    background-image: linear-gradient(to bottom, #009bd7, #0092cc);
+  }
+
+  &--movistar {
+    background-image: linear-gradient(to bottom, #62c802, #57b302);
+  }
+
+  &--unefon {
+    background-image: linear-gradient(to bottom, #f3c414, #d9ae11);
+  }
+}

@@ -1,3 +1,3 @@
 <template>
-  <chip chipName="unefon"></chip>
+  <chip></chip>
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <chip chipName="at&t"></chip>
+  <chip></chip>
 </template>

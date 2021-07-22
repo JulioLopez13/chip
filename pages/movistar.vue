@@ -1,3 +1,3 @@
 <template>
-  <chip chipName="movistar"></chip>
+  <chip></chip>
 </template>

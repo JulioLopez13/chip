@@ -1,8 +1,5 @@
 <template>
-  <div class="index" :class="gradient">
-    <img src="../assets/img/decorator-top.svg" alt="Wave" class="index__decorator--top" />
-    <img src="../assets/img/decorator-bottom.svg" alt="Wave" class="index__decorator--bottom" />
-
+  <div class="index">
     <div class="index__heading">
       <span>Compra tu chip,</span>
       <span>recárgalo y...</span>
@@ -10,16 +7,18 @@
     </div>
 
     <p class="index__thanks">
-      🎊 ¡Gracias por comprar tu chip
-      <span class="highlight">{{ chipName.toUpperCase() }}</span> aquí! 🎉
+      ¡Gracias por comprar
+      <span class="highlight"> tu chip {{ chipName.toUpperCase() }} <span>aquí</span> </span>
+      <img src="../assets/img/loudspeaker.png" alt="Megaphone" />
+      !
     </p>
 
     <div class="index__content">
       <p>
         Recarga o acumula <span class="highlight">$200</span> al mes durante
-        <span class="highlight">4 meses</span> continuos y...
+        <span class="highlight">4 meses</span> consecutivos y...
       </p>
-      <p>¡El quinto mes va por nuestra cuenta! 🥳</p>
+      <p>¡El quinto mes va por nuestra cuenta!</p>
       <p>
         Además, al <span class="highlight">recargar</span> o
         <span class="highlight">acumular</span> $200 durante dos meses continuos participas
@@ -27,33 +26,37 @@
         <span class="highlight">Smartphone</span>
       </p>
       <p>"los últimos 5 dígitos de <span class="highlight">tu número participan</span>"</p>
-      <button class="btn btn--primary btn--border-white">Mecánica >></button>
+      <button
+        class="btn btn--primary btn--border-white"
+        @click="$router.push({ name: 'mechanics' })"
+      >
+        Mecánica >>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
+
 export default {
-  props: {
-    chipName: { type: String, required: true },
+  methods: {
+    ...mapMutations(['changeChip']),
   },
   computed: {
-    gradient() {
-      return {
-        'index--at-t': this.chipName === 'at&t',
-        'index--movistar': this.chipName === 'movistar',
-        'index--unefon': this.chipName === 'unefon',
-      }
-    },
+    ...mapGetters(['chipName']),
+  },
+  mounted() {
+    const { name } = this.$route
+    if (name === 'index') this.changeChip('at&t')
+    else this.changeChip(name)
   },
 }
 </script>
 
 <style lang="scss">
 .index {
-  overflow: hidden;
   min-height: 100vh;
-  color: var(--light-color);
   position: relative;
   text-align: center;
   padding: 4rem 1rem;
@@ -62,34 +65,6 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  &--at-t {
-    background-image: linear-gradient(to bottom, #009bd7, #0092cc);
-  }
-
-  &--movistar {
-    background-image: linear-gradient(to bottom, #62c802, #57b302);
-  }
-
-  &--unefon {
-    background-image: linear-gradient(to bottom, #f3c414, #d9ae11);
-  }
-
-  &__decorator {
-    &--top {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 50%;
-    }
-
-    &--bottom {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 20%;
-    }
-  }
 
   &__heading {
     font-size: 1.6rem;
@@ -112,11 +87,21 @@ export default {
 
   &__thanks {
     font-size: 2.8rem;
+
+    .highlight span {
+      font-size: 3.5rem;
+    }
+
+    img {
+      width: 5.5rem;
+      height: auto;
+      vertical-align: bottom;
+    }
   }
 
   &__content {
     margin-top: 4rem;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 
     p {
       &:nth-child(2) {
