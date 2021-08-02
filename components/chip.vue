@@ -26,6 +26,12 @@
         <span class="highlight">Smartphone</span>
       </p>
       <p>"los últimos 5 dígitos de <span class="highlight">tu número participan</span>"</p>
+    </div>
+
+    <div class="index__buttons">
+      <button class="btn btn--primary btn--border-white" @click="$router.push({ name: 'offer' })">
+        Oferta comercial
+      </button>
       <button
         class="btn btn--primary btn--border-white"
         @click="$router.push({ name: 'mechanics' })"
@@ -110,10 +116,20 @@ export default {
         font-size: 3rem;
       }
     }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
     .btn {
       margin-top: 3rem;
       font-size: 2rem;
+
+      &:last-child {
+        margin-left: 2rem;
+      }
     }
   }
 

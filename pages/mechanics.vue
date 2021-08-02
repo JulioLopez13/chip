@@ -5,62 +5,57 @@
     </div>
 
     <div class="mechanics__info">
-      <div class="img">
-        <img :src="require(`~/assets/img/${chipName}.jpeg`)" :alt="`${chipName} image`" />
+      <div class="mechanics__benefit">
+        <h2>Recarga $200 y obtén:</h2>
+        <ul>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>3GB para navegar</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>1GB para Netflix o YouTube</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>Redes sociales <span class="highlight">ilimitadas</span></span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>Minutos y sms <span class="highlight">ilimitados</span></span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span><span class="highlight">Vigencia: 30 días</span></span>
+          </li>
+        </ul>
       </div>
-      <div class="info">
-        <div class="mechanics__benefit">
-          <h2>Recarga $200 y obtén:</h2>
-          <ul>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>3GB para navegar</span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>1GB para Netflix o YouTube</span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>Redes sociales <span class="highlight">ilimitadas</span></span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>Minutos y sms <span class="highlight">ilimitados</span></span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span><span class="highlight">Vigencia: 30 días</span></span>
-            </li>
-          </ul>
-        </div>
-        <div class="mechanics__benefit">
-          <h2>Ventajas al recargar $200 mensuales:</h2>
-          <ul>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>Conserva tu número con tus familiares y amigos</span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>Mantente comunicado por 30 días</span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>Participa dos veces en la rifa bimestral de un smartphone</span>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <span>¡El quinto mes la recarga va por nuestra cuenta!</span>
-            </li>
-          </ul>
-        </div>
-        <div class="mechanics__resume">
-          * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con
-          el criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
-          recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha
-          de compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
-        </div>
+      <div class="mechanics__benefit">
+        <h2>Ventajas al recargar $200 mensuales:</h2>
+        <ul>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>Conserva tu número con tus familiares y amigos</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>Mantente comunicado por 30 días</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>Participa dos veces en la rifa bimestral de un smartphone</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>¡El quinto mes la recarga va por nuestra cuenta!</span>
+          </li>
+        </ul>
+      </div>
+      <div class="mechanics__resume">
+        * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con
+        el criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
+        recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
+        compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
       </div>
     </div>
 
@@ -236,35 +231,17 @@ $spacing: 2rem;
   }
 
   &__info {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+      'benefit1 benefit2'
+      'resume resume';
 
-    @include respond(lg) {
-      flex-direction: column;
-      & > * {
-        width: 100%;
-      }
-    }
-
-    .img {
-      flex: 0 0 50%;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .info {
-      margin-left: 2rem;
-
-      & > *:not(:last-child) {
-        margin-bottom: $spacing;
-      }
-
-      @include respond(lg) {
-        margin-left: 0;
-        margin-top: $spacing;
-      }
+    @include respond(sm) {
+      grid-template-areas:
+        'benefit1'
+        'benefit2'
+        'resume';
     }
   }
 
@@ -272,9 +249,14 @@ $spacing: 2rem;
     background-image: var(--purple-gradient);
     border-radius: var(--border-radius);
     padding: 1.5rem 2rem;
+    text-align: center;
 
-    @include respond(sm) {
-      text-align: center;
+    &:first-child {
+      grid-area: benefit1;
+    }
+
+    &:last-child {
+      grid-area: benefit2;
     }
 
     h2 {
@@ -305,6 +287,7 @@ $spacing: 2rem;
   &__resume {
     font-size: 2rem;
     text-align: center;
+    grid-area: resume;
   }
 
   &__fifth {
