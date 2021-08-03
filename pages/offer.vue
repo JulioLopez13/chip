@@ -59,20 +59,21 @@
           </li>
         </ul>
       </div>
+      <div class="offer__resume">
+        * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con
+        el criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
+        recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
+        compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import highlightColor from '../mixins/highlight-color'
 
 export default {
-  computed: {
-    ...mapGetters(['chipName']),
-    highlightColor() {
-      return { color: `var(--${this.chipName === 'at&t' ? 'att' : this.chipName}-color)` }
-    },
-  },
+  mixins: [highlightColor],
 }
 </script>
 
@@ -108,14 +109,15 @@ export default {
     margin-top: 2rem;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 50% 1fr;
-    grid-template-areas: 'benefit1 benefit2';
+    grid-template-areas:
+      'benefit1 benefit2'
+      'resume resume';
 
     @include respond(sm) {
-      grid-template-columns: initial;
       grid-template-areas:
         'benefit1'
-        'benefit2';
+        'benefit2'
+        'resume';
     }
   }
 
@@ -149,13 +151,18 @@ export default {
       }
 
       li .highlight {
-        font-family: 'Segoe UI Black', sans-serif;
       }
 
       li:not(:last-child) {
         margin-bottom: 0.8rem;
       }
     }
+  }
+
+  &__resume {
+    font-size: 2rem;
+    text-align: center;
+    grid-area: resume;
   }
 }
 </style>

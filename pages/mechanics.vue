@@ -1,12 +1,5 @@
 <template>
   <div class="mechanics">
-    <div class="mechanics__resume">
-      * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
-      criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
-      recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
-      compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
-    </div>
-
     <div class="mechanics__scene">
       <div class="text-center">
         <h2>Quinto mes de regalo</h2>
@@ -20,7 +13,10 @@
         <div class="table__th">Mes 4 <br />Octubre</div>
         <div class="table__th">Mes 5 <br />Noviembre</div>
 
-        <div class="table__td" data-td="1">Beneficios + $150, acumulas $200</div>
+        <div class="table__td" data-td="1">
+          Beneficios + $150 <br />
+          acumulas $200
+        </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
@@ -50,7 +46,10 @@
         <div class="table__th">Mes 5 <br />Noviembre</div>
         <div class="table__th">Mes 6 <br />Diciembre</div>
 
-        <div class="table__td" data-td="1">Beneficios + $100, acumulas $200</div>
+        <div class="table__td" data-td="1">
+          Beneficios + $100 <br />
+          No acumulas $200
+        </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
@@ -90,7 +89,7 @@
 
         <div class="table__td" data-td="1">Beneficios + recarga de $150 = $200</div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
-        <div class="table__td" data-td="3">Recarga o acumula $200</div>
+        <div class="table__td" data-td="3">Recarga o acumula $150</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
         <div class="table__td" data-td="5">Recarga o acumula $200</div>
 
@@ -148,12 +147,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import highlightColor from '../mixins/highlight-color'
 
 export default {
-  computed: {
-    ...mapGetters(['chipName']),
-  },
+  mixins: [highlightColor],
 }
 </script>
 
@@ -171,13 +168,10 @@ $spacing: 2rem;
     padding: 4rem 2rem;
   }
 
-  &__resume {
-    font-size: 2rem;
-    text-align: center;
-  }
-
   &__scene {
-    margin-top: $spacing + 2rem;
+    &:not(:first-child) {
+      margin-top: $spacing + 2rem;
+    }
 
     h2 {
       margin-bottom: 1rem;
