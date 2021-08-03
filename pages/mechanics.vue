@@ -1,65 +1,13 @@
 <template>
   <div class="mechanics">
-    <div class="mechanics__heading">
-      *Para participar... Recarga preferentemente tu número en la tienda en donde compraste el chip.
+    <div class="mechanics__resume">
+      * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
+      criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
+      recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
+      compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
     </div>
 
-    <div class="mechanics__info">
-      <div class="mechanics__benefit">
-        <h2>Recarga $200 y obtén:</h2>
-        <ul>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>3GB para navegar</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>1GB para Netflix o YouTube</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Redes sociales <span class="highlight">ilimitadas</span></span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Minutos y sms <span class="highlight">ilimitados</span></span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span><span class="highlight">Vigencia: 30 días</span></span>
-          </li>
-        </ul>
-      </div>
-      <div class="mechanics__benefit">
-        <h2>Ventajas al recargar $200 mensuales:</h2>
-        <ul>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Conserva tu número con tus familiares y amigos</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Mantente comunicado por 30 días</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Participa dos veces en la rifa bimestral de un smartphone</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>¡El quinto mes la recarga va por nuestra cuenta!</span>
-          </li>
-        </ul>
-      </div>
-      <div class="mechanics__resume">
-        * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con
-        el criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
-        recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
-        compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
-      </div>
-    </div>
-
-    <div class="mechanics__fifth">
+    <div class="mechanics__scene">
       <div class="text-center">
         <h2>Quinto mes de regalo</h2>
       </div>
@@ -91,7 +39,7 @@
       </div>
     </div>
 
-    <div class="mechanics__fifth">
+    <div class="mechanics__scene">
       <div class="table table--plus">
         <div class="table__title">Escenario 2</div>
 
@@ -223,74 +171,12 @@ $spacing: 2rem;
     padding: 4rem 2rem;
   }
 
-  &__heading {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 3rem;
-    margin-bottom: $spacing;
-    text-align: center;
-  }
-
-  &__info {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-areas:
-      'benefit1 benefit2'
-      'resume resume';
-
-    @include respond(sm) {
-      grid-template-areas:
-        'benefit1'
-        'benefit2'
-        'resume';
-    }
-  }
-
-  &__benefit {
-    background-image: var(--purple-gradient);
-    border-radius: var(--border-radius);
-    padding: 1.5rem 2rem;
-    text-align: center;
-
-    &:first-child {
-      grid-area: benefit1;
-    }
-
-    &:last-child {
-      grid-area: benefit2;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      font-family: 'Segoe UI', sans-serif;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      font-size: 2rem;
-
-      li .fas {
-        font-size: 1.6rem;
-        margin-right: 0.8rem;
-      }
-
-      li .highlight {
-        font-family: 'Segoe UI Black', sans-serif;
-      }
-
-      li:not(:last-child) {
-        margin-bottom: 0.8rem;
-      }
-    }
-  }
-
   &__resume {
     font-size: 2rem;
     text-align: center;
-    grid-area: resume;
   }
 
-  &__fifth {
+  &__scene {
     margin-top: $spacing + 2rem;
 
     h2 {
