@@ -5,7 +5,10 @@
     </div>
 
     <div class="offer__img">
-      <img :src="require(`~/assets/img/${chipName}.jpeg`)" :alt="`${chipName} image`" />
+      <img
+        :src="require(`~/assets/img/${chipName}.${chipName === 'at&t' ? 'png' : 'jpeg'}`)"
+        :alt="`${chipName} image`"
+      />
     </div>
 
     <div class="offer__info">
@@ -51,11 +54,17 @@
           </li>
           <li>
             <i class="fas fa-chevron-right"></i>
-            <span>Participa dos veces en la rifa bimestral de un smartphone</span>
+            <span>
+              Participa dos veces en la
+              <span :style="highlightColor">rifa bimestral de un smartphone</span>
+            </span>
           </li>
           <li>
             <i class="fas fa-chevron-right"></i>
-            <span>¡El quinto mes la recarga va por nuestra cuenta!</span>
+            <span>
+              ¡El quinto mes la recarga
+              <span :style="highlightColor">va por nuestra cuenta</span>!
+            </span>
           </li>
         </ul>
       </div>

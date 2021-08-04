@@ -20,7 +20,9 @@
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
-        <div class="table__td" data-td="5">Este mes va por nuestra cuenta</div>
+        <div class="table__td" data-td="5">
+          <span>Este mes <span :style="highlightColor">va por nuestra cuenta</span></span>
+        </div>
       </div>
       <div class="mechanics__example">
         <h3>Ejemplo escenario 1</h3>
@@ -54,7 +56,9 @@
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
         <div class="table__td" data-td="5">Recarga o acumula $200</div>
-        <div class="table__td" data-td="6">Este mes va por nuestra cuenta</div>
+        <div class="table__td" data-td="6">
+          <span>Este mes <span :style="highlightColor">va por nuestra cuenta</span></span>
+        </div>
       </div>
       <div class="mechanics__example">
         <h3>Ejemplo escenario 2</h3>
@@ -75,69 +79,67 @@
     </div>
 
     <div class="mechanics__raffle">
-      <div class="text-center">
-        <h2>Rifa</h2>
-      </div>
+      <div class="text-center"><h2>Rifa</h2></div>
+
+      <!--Raffle table 1-->
       <div class="table table--raffle">
-        <div class="table__title"></div>
+        <div class="table__title">Rifa de Smartphone</div>
 
         <div class="table__th" data-th="1">Mes 1 (compra)</div>
         <div class="table__th" data-th="2">Mes 2</div>
         <div class="table__th" data-th="3">Mes 3</div>
         <div class="table__th" data-th="4">Mes 4</div>
-        <div class="table__th" data-th="5">Mes 5</div>
 
-        <div class="table__td" data-td="1">Beneficios + recarga de $150 = $200</div>
-        <div class="table__td" data-td="2">Recarga o acumula $200</div>
-        <div class="table__td" data-td="3">Recarga o acumula $150</div>
-        <div class="table__td" data-td="4">Recarga o acumula $200</div>
-        <div class="table__td" data-td="5">Recarga o acumula $200</div>
+        <div class="table__td" data-td="1">
+          <span>Beneficios + recarga de $150 <span class="highlight">= $200</span></span>
+        </div>
+        <div class="table__td" data-td="2">
+          <span>Recarga o acumula <span class="highlight">$200</span></span>
+        </div>
+        <div class="table__td" data-td="3">
+          <span>Recarga o acumula <span class="highlight">$200</span></span>
+        </div>
+        <div class="table__td" data-td="4">
+          <span>Recarga o acumula <span class="highlight">$200</span></span>
+        </div>
 
         <div class="table__arrow table__arrow--success" data-arrow="1">
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
-        <div class="table__arrow table__arrow--error" data-arrow="2">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>No participas</span>
-        </div>
-        <div class="table__arrow table__arrow--error" data-arrow="3">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>No participas</span>
-        </div>
-        <div class="table__arrow table__arrow--success" data-arrow="4">
+        <div class="table__arrow table__arrow--success" data-arrow="2">
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
       </div>
+
+      <!--Raffle table 2-->
       <div class="table table--raffle">
-        <div class="table__title"></div>
+        <div class="table__title">Rifa de Smartphone</div>
 
         <div class="table__th" data-th="1">Mes 1 (compra)</div>
         <div class="table__th" data-th="2">Mes 2</div>
         <div class="table__th" data-th="3">Mes 3</div>
         <div class="table__th" data-th="4">Mes 4</div>
-        <div class="table__th" data-th="5">Mes 5</div>
 
-        <div class="table__td" data-td="1">Beneficios = No pudiste recargar</div>
-        <div class="table__td" data-td="2">Recarga o acumula $100</div>
-        <div class="table__td" data-td="3">Recarga o acumula $200</div>
-        <div class="table__td" data-td="4">Recarga o acumula $200</div>
-        <div class="table__td" data-td="5">Recarga o acumula $200</div>
+        <div class="table__td" data-td="1">
+          <span>Beneficios + recarga de $50 <span class="highlight">= $100</span></span>
+        </div>
+        <div class="table__td" data-td="2">
+          <span>Recarga o acumula <span class="highlight">$150</span></span>
+        </div>
+        <div class="table__td" data-td="3">
+          <span>Recarga o acumula <span class="highlight">$200</span></span>
+        </div>
+        <div class="table__td" data-td="4">
+          <span>Recarga o acumula <span class="highlight">$200</span></span>
+        </div>
 
         <div class="table__arrow table__arrow--error" data-arrow="1">
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>No participas</span>
         </div>
-        <div class="table__arrow table__arrow--error" data-arrow="2">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>No participas</span>
-        </div>
-        <div class="table__arrow table__arrow--success" data-arrow="3">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>Participas</span>
-        </div>
-        <div class="table__arrow table__arrow--success" data-arrow="4">
+        <div class="table__arrow table__arrow--success" data-arrow="2">
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
@@ -223,6 +225,36 @@ $spacing: 2rem;
 
   &__final-note {
     margin-top: $spacing;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius);
+    background-image: linear-gradient(to right bottom, #d98230, #bf722a);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 70%;
+      width: 50%;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: contain;
+      background-image: url('../assets/img/decorator-top.svg');
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      bottom: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      background-image: url('../assets/img/decorator-bottom.svg');
+    }
   }
 
   &__raffle {

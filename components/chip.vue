@@ -8,7 +8,10 @@
 
     <p class="index__thanks">
       ¡Gracias por comprar
-      <span class="highlight"> tu chip {{ chipName.toUpperCase() }} <span>aquí</span> </span>
+      <span class="highlight">
+        tu chip {{ chipName.toUpperCase() }} <br />
+        <span>con nosotros</span>
+      </span>
       <img src="../assets/img/loudspeaker.png" alt="Megaphone" />
       !
     </p>
