@@ -150,7 +150,7 @@
       * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
       criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
       recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
-      compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
+      compra y sólo participan durante 4 meses a partir del mes en que se adquirió el chip.
     </div>
   </div>
 </template>
@@ -227,7 +227,7 @@ $spacing: 2rem;
     margin-top: $spacing;
     padding: 0.8rem 1.6rem;
     border-radius: var(--border-radius);
-    background-image: linear-gradient(to right bottom, #d98230, #bf722a);
+    background-image: linear-gradient(to right bottom, #6a3093, #a044ff);
     position: relative;
 
     &::after {
@@ -268,6 +268,15 @@ $spacing: 2rem;
 
     .table:last-child {
       margin-top: $spacing;
+    }
+  }
+
+  &__raffle,
+  &__scene {
+    .text-center h2 {
+      font-size: 4rem !important;
+      text-transform: uppercase;
+      -webkit-text-stroke: 2px #d98230;
     }
   }
 }

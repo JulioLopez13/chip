@@ -91,6 +91,7 @@
         'th2 td2 arrow1'
         'th3 td3 arrow2'
         'th4 td4 arrow2';
+      grid-template-rows: 1fr repeat(4, 10rem);
     }
   }
 
@@ -139,6 +140,8 @@
       align-items: center;
 
       span {
+        display: inline-block;
+        margin-right: 1rem;
         writing-mode: vertical-lr;
         flex: 0 0 40%;
       }
