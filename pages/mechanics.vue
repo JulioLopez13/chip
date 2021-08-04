@@ -94,19 +94,19 @@
         <div class="table__td" data-td="5">Recarga o acumula $200</div>
 
         <div class="table__arrow table__arrow--success" data-arrow="1">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
         <div class="table__arrow table__arrow--error" data-arrow="2">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>No participas</span>
         </div>
         <div class="table__arrow table__arrow--error" data-arrow="3">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>No participas</span>
         </div>
         <div class="table__arrow table__arrow--success" data-arrow="4">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
       </div>
@@ -126,22 +126,29 @@
         <div class="table__td" data-td="5">Recarga o acumula $200</div>
 
         <div class="table__arrow table__arrow--error" data-arrow="1">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>No participas</span>
         </div>
         <div class="table__arrow table__arrow--error" data-arrow="2">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>No participas</span>
         </div>
         <div class="table__arrow table__arrow--success" data-arrow="3">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
         <div class="table__arrow table__arrow--success" data-arrow="4">
-          <i class="fas fa-level-up-alt"></i>
+          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
       </div>
+    </div>
+
+    <div class="mechanics__resume">
+      * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
+      criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
+      recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
+      compra y sólo participan durante 5 meses a partir del mes en que se adquirió el chip.
     </div>
   </div>
 </template>
@@ -178,6 +185,12 @@ $spacing: 2rem;
       font-size: 3rem;
       font-family: 'Segoe UI Black', sans-serif;
     }
+  }
+
+  &__resume {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   &__table {
