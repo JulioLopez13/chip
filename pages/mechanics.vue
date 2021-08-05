@@ -16,8 +16,8 @@
 
         <div class="table__td" data-td="1">
           <span>
-            <span class="highlight">Beneficios incluidos</span> + recarga de $150
-            <span :style="highlightColor">acumulas $200</span>
+            <span class="highlight">Beneficios incluidos</span> + recarga de $150 <br />
+            <span :style="highlightColor">Acumulas $200</span>
           </span>
         </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
