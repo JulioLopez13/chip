@@ -1,5 +1,6 @@
 <template>
   <div class="mechanics">
+    <!--Escenario 1-->
     <div class="mechanics__scene">
       <div class="text-center">
         <h2>Quinto mes de regalo</h2>
@@ -20,8 +21,8 @@
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
-        <div class="table__td" data-td="5">
-          <span>Este mes <span :style="highlightColor">va por nuestra cuenta</span></span>
+        <div class="table__td" data-td="5" :style="highlightColor">
+          Este mes va por nuestra cuenta
         </div>
       </div>
       <div class="mechanics__example">
@@ -37,6 +38,7 @@
       </div>
     </div>
 
+    <!--Escenario 2-->
     <div class="mechanics__scene">
       <div class="table table--plus">
         <div class="table__title">Escenario 2</div>
@@ -56,8 +58,8 @@
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
         <div class="table__td" data-td="4">Recarga o acumula $200</div>
         <div class="table__td" data-td="5">Recarga o acumula $200</div>
-        <div class="table__td" data-td="6">
-          <span>Este mes <span :style="highlightColor">va por nuestra cuenta</span></span>
+        <div class="table__td" data-td="6" :style="highlightColor">
+          Este mes va por nuestra cuenta
         </div>
       </div>
       <div class="mechanics__example">
@@ -147,10 +149,15 @@
     </div>
 
     <div class="mechanics__resume">
-      * La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
-      criterio de las recargas antes estipuladas. Sólo participan los número que acumulen o
-      recarguen $200 o más en el mes calendario, es decir, no corre el mes a partir de la fecha de
-      compra y sólo participan durante 4 meses a partir del mes en que se adquirió el chip.
+      *
+      <span class="highlight">
+        La Rifa bimestral del Smartphone y el quinto mes de regalo sólo aplican si se cumple con el
+        criterio de las recargas antes estipuladas.
+      </span>
+      Sólo participan los número que <span class="highlight">acumulen o recarguen $200</span> o más
+      en el mes calendario, es decir, no corre el mes a partir de la fecha de compra y sólo
+      participan
+      <span class="highlight">durante 4 meses a partir del mes en que se adquirió el chip</span>.
     </div>
   </div>
 </template>
@@ -193,6 +200,10 @@ $spacing: 2rem;
     margin-top: 2rem;
     font-size: 2rem;
     text-align: center;
+
+    .highlight {
+      font-family: 'Segoe UI Black', sans-serif;
+    }
   }
 
   &__table {
