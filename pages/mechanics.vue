@@ -54,8 +54,8 @@
 
         <div class="table__td" data-td="1">
           <span>
-            <span class="highlight">Beneficios incluidos</span> + recarga de $100
-            <span class="highlight" style="color: firebrick">no acumulas $200</span>
+            <span class="highlight">Beneficios incluidos</span> + recarga de $100 <br />
+            <span class="highlight" style="color: firebrick">No Acumulas $200</span>
           </span>
         </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
