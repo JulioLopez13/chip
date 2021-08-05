@@ -25,6 +25,10 @@
           </li>
           <li>
             <i class="fas fa-chevron-right"></i>
+            <span>1GB para Spotify</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
             <span>
               Redes sociales <span class="highlight" :style="highlightColor">ilimitadas</span>
             </span>

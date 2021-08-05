@@ -15,8 +15,10 @@
         <div class="table__th">Mes 5 <br />Noviembre</div>
 
         <div class="table__td" data-td="1">
-          Beneficios + $150 <br />
-          acumulas $200
+          <span>
+            <span class="highlight">Beneficios incluidos</span> + $150
+            <span :style="highlightColor">acumulas $200</span>
+          </span>
         </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>
@@ -51,8 +53,10 @@
         <div class="table__th">Mes 6 <br />Diciembre</div>
 
         <div class="table__td" data-td="1">
-          Beneficios + $100 <br />
-          No acumulas $200
+          <span>
+            <span class="highlight">Beneficios incluidos</span> + recarga de $100
+            <span class="highlight" style="color: firebrick">no acumulas $200</span>
+          </span>
         </div>
         <div class="table__td" data-td="2">Recarga o acumula $200</div>
         <div class="table__td" data-td="3">Recarga o acumula $200</div>

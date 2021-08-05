@@ -129,6 +129,9 @@ export default {
     .btn {
       margin-top: 3rem;
       font-size: 2rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      font-family: 'Segoe UI Black', sans-serif;
+      background-color: #6a3093;
 
       &:last-child {
         margin-left: 2rem;
