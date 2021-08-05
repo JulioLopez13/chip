@@ -24,7 +24,7 @@
       <p>¡El quinto mes va por nuestra cuenta!</p>
       <p>
         Además, al <span class="highlight">recargar</span> o
-        <span class="highlight">acumular</span> $200 durante dos meses continuos participas
+        <span class="highlight">acumular $200</span> durante dos meses continuos participas
         automáticamente en la <span class="highlight">Rifa bimestral</span> de un
         <span class="highlight">Smartphone</span>
       </p>
@@ -33,7 +33,7 @@
 
     <div class="index__buttons">
       <button class="btn btn--primary btn--border-white" @click="$router.push({ name: 'offer' })">
-        Oferta comercial
+        Beneficios
       </button>
       <button
         class="btn btn--primary btn--border-white"
@@ -131,7 +131,7 @@ export default {
       font-size: 2rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
       font-family: 'Segoe UI Black', sans-serif;
-      background-color: #6a3093;
+      background-image: var(--black-gradient);
 
       &:last-child {
         margin-left: 2rem;
