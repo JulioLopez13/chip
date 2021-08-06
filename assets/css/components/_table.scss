@@ -88,9 +88,9 @@
       'arrow1 arrow1 arrow2 arrow2';
 
     @include respond(md) {
-      grid-template-columns: initial;
+      grid-template-columns: 42.5% 42.5% 15%;
       grid-template-areas:
-        'title title empty'
+        'title title title'
         'th1 td1 arrow1'
         'th2 td2 arrow1'
         'th3 td3 arrow2'

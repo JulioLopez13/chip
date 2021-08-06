@@ -41,3 +41,54 @@
     }
   }
 }
+
+@mixin containerStyle {
+  padding: 4rem;
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @include respond(md) {
+    padding: 4rem 2rem;
+  }
+}
+
+@mixin headingStyle {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@mixin finalNote {
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(to right bottom, #6a3093, #a044ff);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    background-image: url('./assets/img/decorator-top.svg');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    background-image: url('./assets/img/decorator-bottom.svg');
+  }
+}

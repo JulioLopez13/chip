@@ -13,4 +13,12 @@
   &--border-white {
     border: 2px solid var(--light-color);
   }
+
+  &--black {
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI Black', sans-serif;
+    background-image: var(--black-gradient);
+  }
 }

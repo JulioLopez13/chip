@@ -73,6 +73,12 @@
         </ul>
       </div>
     </div>
+
+    <div class="offer__button">
+      <button class="btn btn--black btn--border-white" @click="$router.push({ name: 'reward' })">
+        Premio
+      </button>
+    </div>
   </div>
 </template>
 
@@ -88,20 +94,10 @@ export default {
 @import 'assets/css/utils/mixins';
 
 .offer {
-  padding: 4rem;
-  min-height: 100vh;
-  max-width: 1300px;
-  margin: 0 auto;
-
-  @include respond(md) {
-    padding: 4rem 2rem;
-  }
+  @include containerStyle;
 
   &__heading {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    @include headingStyle;
   }
 
   &__img {
@@ -163,6 +159,11 @@ export default {
         margin-bottom: 0.8rem;
       }
     }
+  }
+
+  &__button {
+    margin: 3rem 0 1rem 0;
+    text-align: center;
   }
 }
 </style>

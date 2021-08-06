@@ -240,36 +240,7 @@ $spacing: 2rem;
 
   &__final-note {
     margin-top: $spacing;
-    padding: 0.8rem 1.6rem;
-    border-radius: var(--border-radius);
-    background-image: linear-gradient(to right bottom, #6a3093, #a044ff);
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 70%;
-      width: 50%;
-      top: 0;
-      left: 0;
-      background-repeat: no-repeat;
-      background-position: top left;
-      background-size: contain;
-      background-image: url('../assets/img/decorator-top.svg');
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 50%;
-      width: 50%;
-      bottom: 0;
-      right: 0;
-      background-repeat: no-repeat;
-      background-position: bottom right;
-      background-size: contain;
-      background-image: url('../assets/img/decorator-bottom.svg');
-    }
+    @include finalNote;
   }
 
   &__raffle {

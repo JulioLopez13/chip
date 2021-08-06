@@ -1,5 +1,8 @@
 <template>
   <div class="default bgChip" :class="gradientBg">
+    <nav class="navbar">
+      <img src="../assets/img/Logo.jpeg" alt="Logo" />
+    </nav>
     <Nuxt class="default__mainContent" />
     <img src="../assets/img/decorator-top.svg" alt="Wave" class="default__decorator--top" />
     <img src="../assets/img/decorator-bottom.svg" alt="Wave" class="default__decorator--bottom" />
@@ -15,6 +18,20 @@ export default {
 </script>
 
 <style lang="scss">
+.navbar {
+  width: 100%;
+  background-color: #000;
+  text-align: right;
+  padding: 0rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  img {
+    height: 6rem;
+  }
+}
+
 .default {
   width: 100%;
   overflow: hidden;
