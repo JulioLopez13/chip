@@ -93,7 +93,7 @@ export default {
 
   &__features &__feature {
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: 'Segoe UI Black', sans-serif;
   }
 
