@@ -30,7 +30,7 @@ export default {
   css: ['~/assets/css/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-js-modal'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

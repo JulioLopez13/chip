@@ -3,12 +3,14 @@
     <!--REWARD-->
     <h1 class="reward__heading">Premio participante en la rifa</h1>
     <div class="reward__img">
-      <img src="../assets/img/XiaomiPocoM3.png" alt="Xiaomi M3" />
+      <img src="../assets/img/giftboxPhone.png" alt="Xiaomi M3" />
     </div>
 
     <!--FEATURES-->
-    <div class="reward__feature"><span>Marca: </span> <span>Xiaomi</span></div>
-    <div class="reward__feature"><span>Modelo: </span> <span>Poco M3</span></div>
+    <div class="reward__features reward__features--black">
+      <div class="reward__feature"><span>Marca: </span> <span>Xiaomi</span></div>
+      <div class="reward__feature"><span>Modelo: </span> <span>Poco M3</span></div>
+    </div>
     <div class="reward__features">
       <h3>Características</h3>
       <div>Pantalla: <span>6.53''</span></div>
@@ -19,13 +21,28 @@
       <div>Cámara principal: <span>Triple de 48MP</span></div>
     </div>
 
-    <!--TERMS-->
-    <div class="reward__terms">
+    <div class="text-center">
+      <button class="btn btn--border-white btn--black" @click="$modal.show('terms')">
+        Condiciones
+      </button>
+    </div>
+
+    <!--TERMS MODAL-->
+    <modal
+      :adaptive="true"
+      :maxWidth="380"
+      :resizable="true"
+      :scrollable="true"
+      classes="reward__terms"
+      height="auto"
+      name="terms"
+    >
       <p>
         <span class="bold-text">La Rifa</span> se celebrará
-        <span class="bold-text">el primer martes de cada mes</span> en combinación con el
-        <span class="bold-text">premio mayor del sorteo de La Lotería Nacional</span>. <br />
-        <span class="bold-text"> "los últimos 5 números de tu numero participan" </span>
+        <span class="bold-text">el Martes 5 de Octubre y el Martes 7 de Diciembre de 2021</span> en
+        combinación con el
+        <span class="bold-text">Sorteo del Premio Mayor de la Lotería Nacional</span>. <br />
+        <span class="bold-text">"Los últimos 5 dígitos de tu número participan"</span>
       </p>
       <p>
         *La rifa bimestral del smartphone así como el quinto mes de regalo, aplican únicamente en
@@ -42,7 +59,7 @@
         notificará al ganador a través del número que resulte ganador.
       </p>
       <p>¡Gracias por participar!</p>
-    </div>
+    </modal>
   </div>
 </template>
 
@@ -66,18 +83,18 @@ export default {
   &__img {
     width: 100%;
     text-align: center;
-    margin-bottom: 3.5rem;
 
     img {
-      max-width: 800px;
+      @include respond(sm) {
+        width: 100%;
+      }
     }
   }
 
-  &__feature {
+  &__features &__feature {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Segoe UI Black', sans-serif;
-    font-size: 3rem;
   }
 
   &__features {
@@ -102,12 +119,23 @@ export default {
         font-family: 'Segoe UI Black', sans-serif;
       }
     }
+
+    &--black {
+      background-image: linear-gradient(to right bottom, #232526, #414345);
+    }
+  }
+
+  .btn--black {
+    margin-top: 2rem;
   }
 
   &__terms {
+    max-height: 60vh;
+    overflow-y: scroll;
+    color: #222222;
     text-align: center;
     font-size: 2rem;
-    margin-top: 3rem;
+    padding: 3rem 2rem;
 
     p:not(:last-child) {
       margin-bottom: 2rem;
@@ -118,42 +146,6 @@ export default {
       font-family: 'Segoe UI Black', sans-serif;
       text-transform: uppercase;
     }
-  }
-
-  @-webkit-keyframes rotating /* Safari and Chrome */ {
-    from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes rotating {
-    from {
-      -ms-transform: rotateY(0deg);
-      -moz-transform: rotateY(0deg);
-      -webkit-transform: rotateY(0deg);
-      -o-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-    }
-    to {
-      -ms-transform: rotateY(360deg);
-      -moz-transform: rotateY(360deg);
-      -webkit-transform: rotateY(360deg);
-      -o-transform: rotateY(360deg);
-      transform: rotateY(360deg);
-    }
-  }
-  .rotating {
-    -webkit-animation: rotating 2s linear;
-    -moz-animation: rotating 2s linear;
-    -ms-animation: rotating 2s linear;
-    -o-animation: rotating 2s linear;
-    animation: rotating 2s linear;
   }
 }
 </style>

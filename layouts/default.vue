@@ -24,7 +24,7 @@ export default {
   text-align: right;
   padding: 0 2rem;
   position: fixed;
-  z-index: 6;
+  z-index: 4;
   top: 0;
   left: 0;
 
