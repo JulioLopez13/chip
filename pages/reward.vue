@@ -11,7 +11,8 @@
     <div class="reward__feature"><span>Modelo: </span> <span>Poco M3</span></div>
     <div class="reward__features">
       <h3>Características</h3>
-      <div>Pantalla: <span>Snapdragon</span></div>
+      <div>Pantalla: <span>6.53''</span></div>
+      <div>Procesador: <span>Snapdragon</span></div>
       <div>Memoria: <span>4GB</span></div>
       <div>Capacidad: <span>128GB</span></div>
       <div>Cámara frontal: <span>8MP</span></div>

@@ -164,6 +164,10 @@ export default {
   &__button {
     margin: 3rem 0 1rem 0;
     text-align: center;
+
+    .btn {
+      width: 15rem;
+    }
   }
 }
 </style>

@@ -36,7 +36,7 @@
         Beneficios
       </button>
       <button class="btn btn--black btn--border-white" @click="$router.push({ name: 'mechanics' })">
-        Mecánica >>
+        Mecánica
       </button>
     </div>
   </div>
@@ -124,6 +124,7 @@ export default {
     flex-wrap: wrap;
 
     .btn {
+      width: 15rem;
       margin-top: 3rem;
 
       &:last-child {

@@ -22,8 +22,9 @@ export default {
   width: 100%;
   background-color: #000;
   text-align: right;
-  padding: 0rem 2rem;
-  position: sticky;
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 6;
   top: 0;
   left: 0;
 
@@ -33,6 +34,7 @@ export default {
 }
 
 .default {
+  margin-top: 5rem;
   width: 100%;
   overflow: hidden;
   position: relative;
