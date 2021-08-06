@@ -45,18 +45,24 @@
         <span class="bold-text">"Los últimos 5 dígitos de tu número participan"</span>
       </p>
       <p>
-        *La rifa bimestral del smartphone así como el quinto mes de regalo, aplican únicamente en
-        líneas que recarguen $200 de manera continua según la mecánica estipulada.**Los números
-        participantes en la promoción serán los que estén registrados en nuestra base de datos y se
-        hayan comprado en los puntos de venta participantes.
+        *<span class="bold-text">La rifa bimestral del smartphone</span> así como el
+        <span class="bold-text">quinto mes de regalo</span>, aplican únicamente
+        <span class="bold-text">en líneas que recarguen $200 de manera continua</span> según la
+        mecánica estipulada. **
+        <span class="bold-text">Los números participantes en la promoción</span>
+        serán los que estén registrados en nuestra base de datos
+        <span class="bold-text">y se hayan comprado en los puntos de venta participantes</span>.
       </p>
       <p>
-        El quinto mes de regalo se abonará automáticamente en el número participante, una vez que se
-        cumpla el criterio de los $200 recargados de manera continua durante 4 meses.
+        <span class="bold-text"
+          >El quinto mes de regalo se abonará automáticamente en el número participante</span
+        >, una vez que se cumpla el criterio de los
+        <span class="bold-text">$200 recargados de manera continua durante 4 meses</span>.
       </p>
       <p>
-        La entrega del Smartphone será en el Punto de Venta en donde se adquirió el Chip y se
-        notificará al ganador a través del número que resulte ganador.
+        <span class="bold-text">La entrega del Smartphone</span> será en el
+        <span class="bold-text">Punto de Venta en donde se adquirió el Chip</span> y se notificará
+        al ganador a través del número que resulte ganador.
       </p>
       <p>¡Gracias por participar!</p>
     </modal>
