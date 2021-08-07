@@ -136,12 +136,7 @@ export default {
   }
 
   &__terms {
-    max-height: 60vh;
-    overflow-y: scroll;
-    color: #222222;
-    text-align: center;
-    font-size: 2rem;
-    padding: 3rem 2rem;
+    @include modalContent;
 
     p:not(:last-child) {
       margin-bottom: 2rem;

@@ -8,11 +8,11 @@
       <div class="table">
         <div class="table__title">Escenario 1</div>
 
-        <div class="table__th">Mes 1 (compra) <br />Julio</div>
-        <div class="table__th">Mes 2 <br />Agosto</div>
-        <div class="table__th">Mes 3 <br />Septiembre</div>
-        <div class="table__th">Mes 4 <br />Octubre</div>
-        <div class="table__th">Mes 5 <br />Noviembre</div>
+        <div class="table__th">Mes 1 (compra)<br />Agosto</div>
+        <div class="table__th">Mes 2 <br />Septiembre</div>
+        <div class="table__th">Mes 3 <br />Octubre</div>
+        <div class="table__th">Mes 4 <br />Noviembre</div>
+        <div class="table__th">Mes 5 <br />Diciembre</div>
 
         <div class="table__td" data-td="1">
           <span>
@@ -45,12 +45,12 @@
       <div class="table table--plus">
         <div class="table__title">Escenario 2</div>
 
-        <div class="table__th">Mes 1 (compra) <br />Julio</div>
-        <div class="table__th">Mes 2 <br />Agosto</div>
-        <div class="table__th">Mes 3 <br />Septiembre</div>
-        <div class="table__th">Mes 4 <br />Octubre</div>
-        <div class="table__th">Mes 5 <br />Noviembre</div>
-        <div class="table__th">Mes 6 <br />Diciembre</div>
+        <div class="table__th">Mes 1 (compra) <br />Agosto</div>
+        <div class="table__th">Mes 2 <br />Septiembre</div>
+        <div class="table__th">Mes 3 <br />Octubre</div>
+        <div class="table__th">Mes 4 <br />Noviembre</div>
+        <div class="table__th">Mes 5 <br />Diciembre</div>
+        <div class="table__th">Mes 6 <br />Enero</div>
 
         <div class="table__td" data-td="1">
           <span>
@@ -89,24 +89,35 @@
 
       <!--Raffle table 1-->
       <div class="table table--raffle">
-        <div class="table__title">Rifa de Smartphone</div>
+        <div class="table__title">
+          <div>
+            Rifa de Smartphone <br />
+            <span style="font-size: 2.2rem">
+              Ejemplo1: <span :style="highlightColor">Participas 2 veces</span>
+            </span>
+          </div>
+        </div>
 
-        <div class="table__th" data-th="1">Mes 1 (compra)</div>
-        <div class="table__th" data-th="2">Mes 2</div>
-        <div class="table__th" data-th="3">Mes 3</div>
-        <div class="table__th" data-th="4">Mes 4</div>
+        <div class="table__th" data-th="1">Mes 1 (compra) <br />Agosto</div>
+        <div class="table__th" data-th="2">Mes 2 <br />Septiembre</div>
+        <div class="table__th" data-th="3">Mes 3 <br />Octubre</div>
+        <div class="table__th" data-th="4">Mes 4 <br />Noviembre</div>
 
         <div class="table__td" data-td="1">
-          <span>Beneficios + recarga de $150 <span class="highlight">= $200</span></span>
+          <span>
+            <span class="bold-text">Beneficios</span> + una Recarga de
+            <span class="bold-text">$150</span> <br />
+            <span :style="highlightColor">Acumulas $200</span>
+          </span>
         </div>
         <div class="table__td" data-td="2">
-          <span>Recarga o acumula <span class="highlight">$200</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
         <div class="table__td" data-td="3">
-          <span>Recarga o acumula <span class="highlight">$200</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
         <div class="table__td" data-td="4">
-          <span>Recarga o acumula <span class="highlight">$200</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
 
         <div class="table__arrow table__arrow--success" data-arrow="1">
@@ -117,28 +128,48 @@
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
+
+        <div class="table__note table__note--success" data-note="1">
+          La <span class="bold-text">Rifa</span> se celebra
+          <span class="bold-text">el primer martes de Octubre</span>
+        </div>
+        <div class="table__note table__note--success" data-note="2">
+          La <span class="bold-text">Rifa</span> se celebra
+          <span class="bold-text">el primer martes de Diciembre</span>
+        </div>
       </div>
 
       <!--Raffle table 2-->
       <div class="table table--raffle">
-        <div class="table__title">Rifa de Smartphone</div>
+        <div class="table__title">
+          <div>
+            Rifa de Smartphone <br />
+            <span style="font-size: 2.2rem">
+              Ejemplo 2: <span style="color: var(--error-color)">Participas una vez</span>
+            </span>
+          </div>
+        </div>
 
-        <div class="table__th" data-th="1">Mes 1 (compra)</div>
-        <div class="table__th" data-th="2">Mes 2</div>
-        <div class="table__th" data-th="3">Mes 3</div>
-        <div class="table__th" data-th="4">Mes 4</div>
+        <div class="table__th" data-th="1">Mes 1 (compra) <br />Agosto</div>
+        <div class="table__th" data-th="2">Mes 2 <br />Septiembre</div>
+        <div class="table__th" data-th="3">Mes 3 <br />Octubre</div>
+        <div class="table__th" data-th="4">Mes 4 <br />Noviembre</div>
 
         <div class="table__td" data-td="1">
-          <span>Beneficios + recarga de $50 <span class="highlight">= $100</span></span>
+          <span>
+            <span class="bold-text">Beneficios</span> + una Recarga de
+            <span class="bold-text">$50</span> <br />
+            <span class="bold-text" style="color: var(--error-color)">Acumulas $100</span>
+          </span>
         </div>
         <div class="table__td" data-td="2">
-          <span>Recarga o acumula <span class="highlight">$150</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
         <div class="table__td" data-td="3">
-          <span>Recarga o acumula <span class="highlight">$200</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
         <div class="table__td" data-td="4">
-          <span>Recarga o acumula <span class="highlight">$200</span></span>
+          <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
 
         <div class="table__arrow table__arrow--error" data-arrow="1">
@@ -149,9 +180,18 @@
           <img src="../assets/img/curved-arrow.svg" alt="Curved" />
           <span>Participas</span>
         </div>
+
+        <div class="table__note table__note--error" data-note="1">
+          No participas en la rifa de Octubre
+        </div>
+        <div class="table__note table__note--success" data-note="2">
+          La <span class="bold-text">Rifa</span> se celebra
+          <span class="bold-text">el primer martes de Diciembre</span>
+        </div>
       </div>
     </div>
 
+    <!--RESUME-->
     <div class="mechanics__resume">
       *
       <span class="highlight">
@@ -163,6 +203,84 @@
       participan
       <span class="highlight">durante 4 meses a partir del mes en que se adquirió el chip</span>.
     </div>
+
+    <!--FAQ BUTTON-->
+    <div class="mechanics__button">
+      <button class="btn btn--black btn--border-white" @click="$modal.show('faq')">
+        Preguntas frecuentes
+      </button>
+    </div>
+
+    <!--FAQ MODAL-->
+    <modal
+      :adaptive="true"
+      :maxWidth="380"
+      :resizable="true"
+      :scrollable="true"
+      classes="mechanics__faq"
+      height="auto"
+      name="faq"
+    >
+      <h2>Preguntas frecuentes:</h2>
+      <div>
+        <p class="question">
+          ¿Qué pasa <span class="bold-text">si compré mi chip</span> en Septiembre y
+          <span class="bold-text">
+            acumulo los $200 en este mes y $200 en el mes de Octubre de 2021
+          </span>
+          ?
+        </p>
+        <p class="answer bold-text">
+          Participas en la Rifa bimestral de un Smartphone el primer martes de Diciembre de 2021
+        </p>
+      </div>
+      <div>
+        <p class="question">
+          ¿Qué pasa
+          <span class="bold-text">
+            sí continuo recargando mi número con $200 en Noviembre y $200 en Diciembre de 2021
+          </span>
+          ?
+        </p>
+        <p class="answer">
+          La recarga del mes de Enero <span class="bold-text">¡va por nuestra cuenta!</span> y
+          además
+          <span class="bold-text">participas automáticamente en la rifa de Febrero de 2022</span>.
+        </p>
+      </div>
+      <div>
+        <p class="question">
+          ¿Qué pasa <span class="bold-text">si compré mi chip en Agosto</span> pero
+          <span class="bold-text" style="color: var(--error-color)">no pude acumular $200</span> en
+          este mes
+          <span class="bold-text" style="color: var(--error-color)">ni en el mes de Septiembre</span
+          >, pero <span class="bold-text">recargo $200</span> en
+          <span class="bold-text">Octubre</span> y <span class="bold-text">recargo $200</span> en
+          <span class="bold-text">Noviembre de 2021</span>?
+        </p>
+        <p class="answer">
+          Participas en la
+          <span class="bold-text">Rifa Bimestral del primer martes de Diciembre de 2021</span>
+        </p>
+      </div>
+      <div>
+        <p class="question bold-text">
+          ¿Cuánto tiempo dura la promoción a partir de la fecha en qué compré mi chip?
+        </p>
+        <p class="answer bold-text">4 meses</p>
+      </div>
+      <div>
+        <p class="question">
+          ¿<span class="bold-text">En qué fechas</span> se celebrará
+          <span class="bold-text">la Rifa del Smartphone</span>?
+        </p>
+        <p class="answer bold-text">
+          - Martes 5 de Octubre 2021 <br />
+          - Martes 7 de Diciembre 2021 <br />
+          - Martes 1 de Febrero (Sé confirmará fecha)
+        </p>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -263,6 +381,36 @@ $spacing: 2rem;
       font-size: 4rem !important;
       text-transform: uppercase;
       -webkit-text-stroke: 2px #d98230;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  &__faq {
+    @include modalContent;
+
+    h2 {
+      font-family: 'Segoe UI Black', sans-serif;
+      margin-bottom: 2rem;
+    }
+
+    & > div:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+    .question {
+      margin-bottom: 1rem;
+    }
+
+    .answer {
+      color: #6a3093;
+
+      &::before {
+        content: 'R= ';
+      }
     }
   }
 }

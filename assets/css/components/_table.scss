@@ -93,9 +93,11 @@
         'title title title'
         'th1 td1 arrow1'
         'th2 td2 arrow1'
+        'note1 note1 note1'
         'th3 td3 arrow2'
-        'th4 td4 arrow2';
-      grid-template-rows: 1fr repeat(4, 10rem);
+        'th4 td4 arrow2'
+        'note2 note2 note2';
+      grid-template-rows: 1fr repeat(2, 10rem) min-content repeat(2, 10rem) min-content;
     }
   }
 
@@ -108,6 +110,16 @@
       &[data-#{$name}='#{$i}'] {
         grid-area: #{$name}#{$i};
       }
+    }
+  }
+
+  @mixin successErrorBg() {
+    &--success {
+      background-color: #2d7c09;
+    }
+
+    &--error {
+      background-color: var(--error-color);
     }
   }
 
@@ -128,11 +140,23 @@
     @include setPosition(arrow);
   }
 
+  &--raffle &__note {
+    display: none;
+    padding: 0.5rem;
+    @include setPosition(note);
+    @include successErrorBg;
+
+    @include respond(md) {
+      display: block;
+    }
+  }
+
   &__arrow {
     padding: 0.8rem;
     text-transform: uppercase;
     font-size: 1.6rem;
     font-family: 'Segoe UI Black', sans-serif;
+    @include successErrorBg;
 
     display: flex;
     justify-content: center;
@@ -159,14 +183,6 @@
       @include respond(md) {
         transform: rotate(90deg) rotateY(180deg);
       }
-    }
-
-    &--success {
-      background-color: #2d7c09;
-    }
-
-    &--error {
-      background-color: #cc1f36;
     }
   }
 }
