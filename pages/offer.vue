@@ -14,7 +14,7 @@
     <div class="offer__info">
       <div class="offer__benefit">
         <h2 :style="highlightColor">Recarga $200 y obtén:</h2>
-        <ul v-if="chipName === 'at&t' || 'unefon'">
+        <ul v-if="chipName !== 'movistar'">
           <li>
             <i class="fas fa-chevron-right"></i>
             <span>3GB para navegar</span>
@@ -44,7 +44,7 @@
             <span class="highlight" :style="highlightColor">Vigencia: 30 días</span>
           </li>
         </ul>
-        <ul v-if="chipName === 'movistar'">
+        <ul v-else>
           <li>
             <i class="fas fa-chevron-right"></i>
             <span>
