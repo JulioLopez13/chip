@@ -6,15 +6,19 @@
 
     <div class="offer__img">
       <img
-        :src="require(`~/assets/img/${chipName}.${chipName === 'at&t' ? 'png' : 'jpg'}`)"
+        :src="
+          require(`~/assets/img/${chipName}.${
+            chipName === 'at&t' || chipName === 'movistar' ? 'png' : 'jpg'
+          }`)
+        "
         :alt="`${chipName} image`"
       />
     </div>
 
     <div class="offer__info">
-      <div class="offer__benefit">
+      <div class="offer__benefit" :class="benefitClass">
         <h2 :style="highlightColor">Recarga $200 y obtén:</h2>
-        <ul v-if="chipName !== 'movistar'">
+        <ul v-if="chipName !== 'unefon'">
           <li>
             <i class="fas fa-chevron-right"></i>
             <span>3GB para navegar</span>
@@ -77,7 +81,7 @@
           </li>
         </ul>
       </div>
-      <div class="offer__benefit">
+      <div class="offer__benefit" :class="benefitClass">
         <h2 :style="highlightColor">Ventajas al recargar $200 mensuales:</h2>
         <ul>
           <li>
@@ -107,7 +111,11 @@
     </div>
 
     <div class="offer__button">
-      <button class="btn btn--black btn--border-white" @click="$router.push({ name: 'reward' })">
+      <button
+        class="btn btn--border-white"
+        :class="buttonClass"
+        @click="$router.push({ name: 'reward' })"
+      >
         Premio
       </button>
     </div>
@@ -116,9 +124,10 @@
 
 <script>
 import highlightColor from '../mixins/highlight-color'
+import buttonClass from '../mixins/buttons'
 
 export default {
-  mixins: [highlightColor],
+  mixins: [highlightColor, buttonClass],
 }
 </script>
 
@@ -190,6 +199,12 @@ export default {
       li:not(:last-child) {
         margin-bottom: 0.8rem;
       }
+    }
+
+    &--movistar {
+      background-color: white;
+      background-image: initial;
+      color: #222222;
     }
   }
 

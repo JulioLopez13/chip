@@ -5,7 +5,7 @@
       <div class="text-center">
         <h2>Quinto mes de regalo</h2>
       </div>
-      <div class="table">
+      <div class="table" :class="tableMovistar">
         <div class="table__title">Escenario 1</div>
 
         <div class="table__th">Mes 1 (compra)<br />Agosto</div>
@@ -42,7 +42,7 @@
 
     <!--Escenario 2-->
     <div class="mechanics__scene">
-      <div class="table table--plus">
+      <div class="table table--plus" :class="tableMovistar">
         <div class="table__title">Escenario 2</div>
 
         <div class="table__th">Mes 1 (compra) <br />Agosto</div>
@@ -76,7 +76,7 @@
           Octubre, Noviembre y Diciembre) <br />
           <span class="highlight">¡¡¡automáticamente Enero te lo regalamos!!!</span>
         </p>
-        <p class="mechanics__final-note">
+        <p class="mechanics__final-note" :class="finalNote">
           <span class="highlight">* Los meses únicamente son ejemplos</span>, es decir, pudiste
           haber comprado tu chip posterior al mes de Agosto, así que tanto el mes de compra así como
           el mes de regalo, <span class="highlight">se recorren.</span>
@@ -88,12 +88,13 @@
       <div class="text-center"><h2>Rifa</h2></div>
 
       <!--Raffle table 1-->
-      <div class="table table--raffle">
+      <div class="table table--raffle" :class="tableMovistar">
         <div class="table__title">
           <div>
             Rifa de Smartphone <br />
             <span style="font-size: 2.2rem">
-              Ejemplo1: <span :style="highlightColor">Participas 2 veces</span>
+              Ejemplo1:
+              <span :style="highlightColor"> Participas 2 veces </span>
             </span>
           </div>
         </div>
@@ -134,7 +135,7 @@
       </div>
 
       <!--Raffle table 2-->
-      <div class="table table--raffle">
+      <div class="table table--raffle" :class="tableMovistar">
         <div class="table__title">
           <div>
             Rifa de Smartphone <br />
@@ -194,7 +195,7 @@
 
     <!--FAQ BUTTON-->
     <div class="mechanics__button">
-      <button class="btn btn--black btn--border-white" @click="$modal.show('faq')">
+      <button class="btn btn--border-white" :class="buttonClass" @click="$modal.show('faq')">
         Preguntas frecuentes
       </button>
     </div>
@@ -218,7 +219,7 @@
           </span>
           ?
         </p>
-        <p class="answer bold-text">
+        <p :class="answerClass" class="answer bold-text">
           Participas en la Rifa bimestral de un Smartphone el primer martes de Diciembre de 2021
         </p>
       </div>
@@ -230,7 +231,7 @@
           </span>
           ?
         </p>
-        <p class="answer">
+        <p :class="answerClass" class="answer">
           La recarga del mes de Enero <span class="bold-text">¡va por nuestra cuenta!</span> y
           además
           <span class="bold-text">participas automáticamente en la rifa de Febrero de 2022</span>.
@@ -246,7 +247,7 @@
           <span class="bold-text">Octubre</span> y <span class="bold-text">recargo $200</span> en
           <span class="bold-text">Noviembre de 2021</span>?
         </p>
-        <p class="answer">
+        <p :class="answerClass" class="answer">
           Participas en la
           <span class="bold-text">Rifa Bimestral del primer martes de Diciembre de 2021</span>
         </p>
@@ -255,14 +256,14 @@
         <p class="question bold-text">
           ¿Cuánto tiempo dura la promoción a partir de la fecha en qué compré mi chip?
         </p>
-        <p class="answer bold-text">4 meses</p>
+        <p :class="answerClass" class="answer bold-text">4 meses</p>
       </div>
       <div>
         <p class="question">
           ¿<span class="bold-text">En qué fechas</span> se celebrará
           <span class="bold-text">la Rifa del Smartphone</span>?
         </p>
-        <p class="answer bold-text">
+        <p :class="answerClass" class="answer bold-text">
           - Martes 5 de Octubre de 2021 <br />
           - Martes 7 de Diciembre de 2021 <br />
           - Martes 1 de Febrero de 2022 (fecha por confirmar)
@@ -274,9 +275,21 @@
 
 <script>
 import highlightColor from '../mixins/highlight-color'
+import buttonClass from '../mixins/buttons'
 
 export default {
-  mixins: [highlightColor],
+  mixins: [highlightColor, buttonClass],
+  computed: {
+    tableMovistar() {
+      return this.chipName === 'movistar' ? 'table--movistar' : ''
+    },
+    finalNote() {
+      return this.chipName === 'movistar' ? 'mechanics__final-note--movistar' : ''
+    },
+    answerClass() {
+      return this.chipName === 'movistar' ? 'answer--movistar' : ''
+    },
+  },
 }
 </script>
 
@@ -347,6 +360,11 @@ $spacing: 2rem;
   &__final-note {
     margin-top: $spacing;
     @include finalNote;
+
+    &--movistar {
+      background-image: initial;
+      background-color: var(--movistar-blue-color);
+    }
   }
 
   &__raffle {
@@ -398,6 +416,10 @@ $spacing: 2rem;
 
       &::before {
         content: 'R= ';
+      }
+
+      &--movistar {
+        color: var(--movistar-blue-color);
       }
     }
   }

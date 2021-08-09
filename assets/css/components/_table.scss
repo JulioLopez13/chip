@@ -12,7 +12,7 @@
 
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-column-gap: 1px;
+  grid-gap: 1px;
 
   @include respond(md) {
     grid-template-columns: 40% 60%;
@@ -167,5 +167,12 @@
       padding: 0.8rem 0;
       writing-mode: vertical-lr;
     }
+  }
+
+  &--movistar &__title,
+  &--movistar &__th {
+    background-image: initial;
+    background-color: var(--movistar-blue-color);
+    color: white;
   }
 }

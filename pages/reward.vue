@@ -7,11 +7,11 @@
     </div>
 
     <!--FEATURES-->
-    <div class="reward__features reward__features--black">
+    <div class="init reward__features reward__features--black" :class="rewardFeaturesClass">
       <div class="reward__feature"><span>Marca: </span> <span>Xiaomi</span></div>
       <div class="reward__feature"><span>Modelo: </span> <span>Poco M3</span></div>
     </div>
-    <div class="reward__features">
+    <div class="final reward__features" :class="rewardFeaturesClass">
       <h3>Características</h3>
       <div>Pantalla: <span>6.53''</span></div>
       <div>Procesador: <span>Snapdragon</span></div>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="text-center">
-      <button class="btn btn--border-white btn--black" @click="$modal.show('terms')">
+      <button class="btn btn--border-white" :class="buttonClass" @click="$modal.show('terms')">
         Condiciones
       </button>
     </div>
@@ -70,8 +70,16 @@
 </template>
 
 <script>
+import buttonClass from '../mixins/buttons'
+
 export default {
+  mixins: [buttonClass],
   name: 'reward',
+  computed: {
+    rewardFeaturesClass() {
+      return this.chipName === 'movistar' ? 'reward__features--movistar' : ''
+    },
+  },
 }
 </script>
 
@@ -129,9 +137,23 @@ export default {
     &--black {
       background-image: linear-gradient(to right bottom, #232526, #414345);
     }
+
+    &--movistar {
+      &.init {
+        background-image: initial;
+        background-color: white;
+        color: var(--movistar-color);
+      }
+
+      &.final {
+        background-image: initial;
+        background-color: var(--movistar-blue-color);
+        color: white;
+      }
+    }
   }
 
-  .btn--black {
+  .btn {
     margin-top: 2rem;
   }
 

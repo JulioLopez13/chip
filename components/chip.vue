@@ -32,10 +32,18 @@
     </div>
 
     <div class="index__buttons">
-      <button class="btn btn--black btn--border-white" @click="$router.push({ name: 'offer' })">
+      <button
+        class="btn btn--border-white"
+        :class="buttonClass"
+        @click="$router.push({ name: 'offer' })"
+      >
         Beneficios
       </button>
-      <button class="btn btn--black btn--border-white" @click="$router.push({ name: 'mechanics' })">
+      <button
+        class="btn btn--border-white"
+        :class="buttonClass"
+        @click="$router.push({ name: 'mechanics' })"
+      >
         Mecánica
       </button>
     </div>
@@ -44,8 +52,10 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import buttonClass from '../mixins/buttons'
 
 export default {
+  mixins: [buttonClass],
   methods: {
     ...mapMutations(['changeChip']),
   },
