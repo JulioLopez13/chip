@@ -27,7 +27,7 @@
             <i class="fas fa-chevron-right"></i>
             <span>1GB para Netflix o YouTube</span>
           </li>
-          <li>
+          <li v-if="chipName !== 'movistar'">
             <i class="fas fa-chevron-right"></i>
             <span>1GB para Spotify</span>
           </li>
@@ -65,7 +65,10 @@
           </li>
           <li>
             <i class="fas fa-chevron-right"></i>
-            <span>3500 MB para Facebook</span>
+            <span>
+              3500 MB para Facebook <br />
+              (100MB diarios)
+            </span>
           </li>
           <li>
             <i class="fas fa-chevron-right"></i>

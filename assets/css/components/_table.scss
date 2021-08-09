@@ -169,10 +169,19 @@
     }
   }
 
-  &--movistar &__title,
+  &--movistar &__title {
+    background-image: initial;
+    background-color: #f3f3f3;
+    color: #222222;
+  }
+
   &--movistar &__th {
     background-image: initial;
     background-color: var(--movistar-blue-color);
     color: white;
+  }
+
+  &--movistar &__td {
+    background-color: #f3f3f3;
   }
 }

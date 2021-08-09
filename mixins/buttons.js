@@ -5,8 +5,9 @@ export default {
     ...mapGetters(['chipName']),
     buttonClass() {
       return {
-        'btn--black': this.chipName !== 'movistar',
+        'btn--black': this.chipName === 'at&t',
         'btn--movistar': this.chipName === 'movistar',
+        'btn--unefon': this.chipName === 'unefon',
       }
     },
     benefitClass() {
