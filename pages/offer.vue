@@ -5,14 +5,7 @@
     </div>
 
     <div class="offer__img">
-      <img
-        :src="
-          require(`~/assets/img/${chipName}.${
-            chipName === 'at&t' || chipName === 'movistar' ? 'png' : 'jpg'
-          }`)
-        "
-        :alt="`${chipName} image`"
-      />
+      <img :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
     </div>
 
     <div class="offer__info">
