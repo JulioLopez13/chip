@@ -31,11 +31,11 @@
         <h3>Ejemplo escenario 1</h3>
         <p>
           Si compraste tu chip <span class="highlight">con beneficios incluidos</span> en el mes de
-          julio y al vencer estos recargas $150 antes del 31 de julio
+          Agosto y al vencer estos recargas $150 antes del 31 de Agosto
           <span class="highlight">ya acumulaste $200</span>, si continuas recargando o acumulando
-          <span class="highlight">$200</span> durante los próximos tres meses (agosto, septiembre y
-          octubre) <br />
-          <span class="highlight">¡¡¡automáticamente Noviembre te lo regalamos!!!</span>
+          <span class="highlight">$200</span> durante los próximos tres meses (Septiembre, Octubre y
+          Noviembre) <br />
+          <span class="highlight">¡¡¡automáticamente Diciembre te lo regalamos!!!</span>
         </p>
       </div>
     </div>
@@ -70,15 +70,15 @@
         <h3>Ejemplo escenario 2</h3>
         <p>
           Si compraste tu chip <span class="highlight">con beneficios incluidos</span> en el mes de
-          julio y al vencer estos no pudiste recargar $150 antes del 31 de julio
+          Agosto y al vencer estos no pudiste recargar $150 antes del 31 de Agosto
           <span class="highlight">no se cumple el criterio</span>, pero si acumulas
-          <span class="highlight">$200</span> durante los próximos cuatro meses (agosto, septiembre,
-          octubre y noviembre) <br />
-          <span class="highlight">¡¡¡automáticamente Diciembre te lo regalamos!!!</span>
+          <span class="highlight">$200</span> durante los próximos cuatro meses (Septiembre,
+          Octubre, Noviembre y Diciembre) <br />
+          <span class="highlight">¡¡¡automáticamente Enero te lo regalamos!!!</span>
         </p>
         <p class="mechanics__final-note">
           <span class="highlight">* Los meses únicamente son ejemplos</span>, es decir, pudiste
-          haber comprado tu chip posterior al mes de julio, así que tanto el mes de compra así como
+          haber comprado tu chip posterior al mes de Agosto, así que tanto el mes de compra así como
           el mes de regalo, <span class="highlight">se recorren.</span>
         </p>
       </div>
@@ -120,14 +120,8 @@
           <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
 
-        <div class="table__arrow table__arrow--success" data-arrow="1">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>Participas</span>
-        </div>
-        <div class="table__arrow table__arrow--success" data-arrow="2">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>Participas</span>
-        </div>
+        <div class="table__arrow table__arrow--success" data-arrow="1">Participas</div>
+        <div class="table__arrow table__arrow--success" data-arrow="2">Participas</div>
 
         <div class="table__note table__note--success" data-note="1">
           La <span class="bold-text">Rifa</span> se celebra
@@ -172,14 +166,8 @@
           <span>Recargas o acumulas <span class="highlight">$200</span></span>
         </div>
 
-        <div class="table__arrow table__arrow--error" data-arrow="1">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>No participas</span>
-        </div>
-        <div class="table__arrow table__arrow--success" data-arrow="2">
-          <img src="../assets/img/curved-arrow.svg" alt="Curved" />
-          <span>Participas</span>
-        </div>
+        <div class="table__arrow table__arrow--error" data-arrow="1">No participas</div>
+        <div class="table__arrow table__arrow--success" data-arrow="2">Participas</div>
 
         <div class="table__note table__note--error" data-note="1">
           No participas en la rifa de Octubre
@@ -275,9 +263,9 @@
           <span class="bold-text">la Rifa del Smartphone</span>?
         </p>
         <p class="answer bold-text">
-          - Martes 5 de Octubre 2021 <br />
-          - Martes 7 de Diciembre 2021 <br />
-          - Martes 1 de Febrero (Sé confirmará fecha)
+          - Martes 5 de Octubre de 2021 <br />
+          - Martes 7 de Diciembre de 2021 <br />
+          - Martes 1 de Febrero de 2022 (fecha por confirmar)
         </p>
       </div>
     </modal>

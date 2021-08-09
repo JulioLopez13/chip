@@ -88,7 +88,7 @@
       'arrow1 arrow1 arrow2 arrow2';
 
     @include respond(md) {
-      grid-template-columns: 42.5% 42.5% 15%;
+      grid-template-columns: 45% 45% 1fr;
       grid-template-areas:
         'title title title'
         'th1 td1 arrow1'
@@ -97,7 +97,9 @@
         'th3 td3 arrow2'
         'th4 td4 arrow2'
         'note2 note2 note2';
-      grid-template-rows: 1fr repeat(2, 10rem) min-content repeat(2, 10rem) min-content;
+      grid-template-rows:
+        min-content repeat(2, minmax(10rem, 1fr)) min-content
+        repeat(2, minmax(10rem, 1fr)) min-content;
     }
   }
 
@@ -156,33 +158,14 @@
     text-transform: uppercase;
     font-size: 1.6rem;
     font-family: 'Segoe UI Black', sans-serif;
-    @include successErrorBg;
-
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    @include successErrorBg;
 
     @include respond(md) {
       padding: 0.8rem 0;
-      flex-direction: initial;
-      align-items: center;
-
-      span {
-        display: inline-block;
-        margin-right: 1rem;
-        writing-mode: vertical-lr;
-        flex: 0 0 40%;
-      }
-    }
-
-    img {
-      transform: rotate(180deg);
-      height: 2rem;
-      width: 100%;
-
-      @include respond(md) {
-        transform: rotate(90deg) rotateY(180deg);
-      }
+      writing-mode: vertical-lr;
     }
   }
 }
