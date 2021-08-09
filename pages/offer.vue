@@ -6,7 +6,7 @@
 
     <div class="offer__img">
       <img
-        :src="require(`~/assets/img/${chipName}.${chipName === 'at&t' ? 'png' : 'jpeg'}`)"
+        :src="require(`~/assets/img/${chipName}.${chipName === 'at&t' ? 'png' : 'jpg'}`)"
         :alt="`${chipName} image`"
       />
     </div>
@@ -14,7 +14,7 @@
     <div class="offer__info">
       <div class="offer__benefit">
         <h2 :style="highlightColor">Recarga $200 y obtén:</h2>
-        <ul>
+        <ul v-if="chipName === 'at&t' || 'unefon'">
           <li>
             <i class="fas fa-chevron-right"></i>
             <span>3GB para navegar</span>
@@ -42,6 +42,38 @@
           <li>
             <i class="fas fa-chevron-right"></i>
             <span class="highlight" :style="highlightColor">Vigencia: 30 días</span>
+          </li>
+        </ul>
+        <ul v-if="chipName === 'movistar'">
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>
+              10,500 MB para navegar. <br />
+              (300MB diarios)
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>
+              Minutos, SMS y WhatsApp
+              <span :style="highlightColor">ilimitados.</span>
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span>3500 MB para Facebook</span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span> 500 MB para Vídeo </span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span> 500 MB para Juegos </span>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <span class="highlight" :style="highlightColor">Vigencia: 35 días</span>
           </li>
         </ul>
       </div>
