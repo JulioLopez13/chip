@@ -141,8 +141,8 @@ export default {
     &--movistar {
       &.init {
         background-image: initial;
-        background-color: white;
-        color: var(--movistar-pink-color);
+        background-color: var(--movistar-pink-color);
+        color: white;
       }
 
       &.final {
