@@ -142,7 +142,7 @@ export default {
       &.init {
         background-image: initial;
         background-color: white;
-        color: var(--movistar-color);
+        color: var(--movistar-pink-color);
       }
 
       &.final {
