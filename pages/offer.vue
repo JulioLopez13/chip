@@ -3,9 +3,12 @@
     <div class="offer__heading">
       *Para participar... Recarga preferentemente tu número en la tienda en donde compraste el chip.
     </div>
-
     <div class="offer__img">
-      <img :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
     </div>
 
     <div class="offer__info">
