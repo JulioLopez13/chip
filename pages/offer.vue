@@ -11,113 +11,113 @@
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
     </div>
 
-    <div class="offer__info">
-      <div class="offer__benefit" :class="benefitClass">
-        <h2 :style="highlightColor">Recarga $200 y obtén:</h2>
-        <ul v-if="chipName !== 'unefon'">
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>3GB para navegar</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>1GB para Netflix o YouTube</span>
-          </li>
-          <li v-if="chipName !== 'movistar'">
-            <i class="fas fa-chevron-right"></i>
-            <span>1GB para Spotify</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              Redes sociales <span class="highlight" :style="highlightColor">ilimitadas</span>
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              Minutos y sms <span class="highlight" :style="highlightColor">ilimitados</span>
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span class="highlight" :style="highlightColor">Vigencia: 30 días</span>
-          </li>
-        </ul>
-        <ul v-else>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              10,500 MB para navegar. <br />
-              (300MB diarios)
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              Minutos, SMS y WhatsApp
-              <span :style="highlightColor">ilimitados.</span>
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              3500 MB para Facebook <br />
-              (100MB diarios)
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span> 500 MB para Vídeo </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span> 500 MB para Juegos </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span class="highlight" :style="highlightColor">Vigencia: 35 días</span>
-          </li>
-        </ul>
-      </div>
-      <div class="offer__benefit" :class="benefitClass">
-        <h2 :style="highlightColor">Ventajas al recargar $200 mensuales:</h2>
-        <ul>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Conserva tu número con tus familiares y amigos</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>Mantente comunicado por 30 días</span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              Participa dos veces en la
-              <span :style="highlightColor">rifa bimestral de un smartphone</span>
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <span>
-              ¡El quinto mes la recarga
-              <span :style="highlightColor">va por nuestra cuenta</span>!
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
+<!--    <div class="offer__info">-->
+<!--      <div class="offer__benefit" :class="benefitClass">-->
+<!--        <h2 :style="highlightColor">Recarga $200 y obtén:</h2>-->
+<!--        <ul v-if="chipName !== 'unefon'">-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>3GB para navegar</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>1GB para Netflix o YouTube</span>-->
+<!--          </li>-->
+<!--          <li v-if="chipName !== 'movistar'">-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>1GB para Spotify</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              Redes sociales <span class="highlight" :style="highlightColor">ilimitadas</span>-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              Minutos y sms <span class="highlight" :style="highlightColor">ilimitados</span>-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span class="highlight" :style="highlightColor">Vigencia: 30 días</span>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--        <ul v-else>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              10,500 MB para navegar. <br />-->
+<!--              (300MB diarios)-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              Minutos, SMS y WhatsApp-->
+<!--              <span :style="highlightColor">ilimitados.</span>-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              3500 MB para Facebook <br />-->
+<!--              (100MB diarios)-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span> 500 MB para Vídeo </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span> 500 MB para Juegos </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span class="highlight" :style="highlightColor">Vigencia: 35 días</span>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <div class="offer__benefit" :class="benefitClass">-->
+<!--        <h2 :style="highlightColor">Ventajas al recargar $200 mensuales:</h2>-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>Conserva tu número con tus familiares y amigos</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>Mantente comunicado por 30 días</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              Participa dos veces en la-->
+<!--              <span :style="highlightColor">rifa bimestral de un smartphone</span>-->
+<!--            </span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <i class="fas fa-chevron-right"></i>-->
+<!--            <span>-->
+<!--              ¡El quinto mes la recarga-->
+<!--              <span :style="highlightColor">va por nuestra cuenta</span>!-->
+<!--            </span>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="offer__button">
-      <button
-        class="btn btn--border-white"
-        :class="buttonClass"
-        @click="$router.push({ name: 'reward' })"
-      >
-        Premio
-      </button>
-    </div>
+<!--    <div class="offer__button">-->
+<!--      <button-->
+<!--        class="btn btn&#45;&#45;border-white"-->
+<!--        :class="buttonClass"-->
+<!--        @click="$router.push({ name: 'reward' })"-->
+<!--      >-->
+<!--        Premio-->
+<!--      </button>-->
+<!--    </div>-->
   </div>
 </template>
 

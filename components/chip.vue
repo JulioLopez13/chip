@@ -53,6 +53,7 @@
 <script>
 import { mapGetters, mapMutations } from 'vuex'
 import buttonClass from '../mixins/buttons'
+import offer from '../pages/offer'
 
 export default {
   mixins: [buttonClass],
@@ -66,6 +67,10 @@ export default {
     const { name } = this.$route
     if (name === 'index') this.changeChip('at&t')
     else this.changeChip(name)
+
+    setTimeout(()=>{
+      this.$router.push({name:`offer`})
+    },500)
   },
 }
 </script>
