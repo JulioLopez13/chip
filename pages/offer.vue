@@ -1,12 +1,19 @@
 <template>
   <div class="offer">
     <div class="offer__heading">
-      *Para participar... Recarga preferentemente tu número en la tienda en donde compraste el chip.
+      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:
     </div>
     <div class="offer__img">
       <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
+    </div>
+    <div class="offer__heading">
+      Esta oferta la tendras si conservar tu mismo número al hacer tu portabilidad con nosotros:
+    </div>
+    <div class="offer__img">
       <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
     </div>
