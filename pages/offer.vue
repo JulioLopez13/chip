@@ -7,11 +7,9 @@
       <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew.png`)" :alt="`${chipName} image`" />
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
-      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
     </div>
     <div class="offer__heading">
-      Esta oferta la tendras si conservar tu mismo número al hacer tu portabilidad con nosotros:
+      Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:
     </div>
     <div class="offer__img">
       <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
