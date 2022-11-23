@@ -1,6 +1,6 @@
 <template>
   <div class="offer">
-    <div v-if=true>
+    <div v-if=false>
       <div class="offer__heading">
         Recarga 200 y recibe:
       </div>
