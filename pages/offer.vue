@@ -30,13 +30,13 @@
     </div>
     <br v-if='chipName == `at&t`'>
     <div class="offer__imgHeader" v-if='chipName == `at&t`'>
-      <img :src="require(`~/assets/img/attNew5.png`)" :alt="`${chipName} image`" />
+      <img :src="require(`~/assets/img/attNew7.png`)" :alt="`${chipName} image`" />
     </div>
     <div  class="offer__heading" v-else>
       Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:
     </div>
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew2.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew6.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
     </div>
 
