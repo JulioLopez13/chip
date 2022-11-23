@@ -1,14 +1,38 @@
 <template>
   <div class="offer">
-    <div class="offer__heading">
+    <div v-if=false>
+      <div class="offer__heading">
+        Recarga 200 y recibe:
+      </div>
+      <div class="offer__heading">
+        Navegacion libre: 3GB
+      </div>
+      <div class="offer__heading">
+        Video: 1.5GB
+      </div>
+      <div class="offer__heading">
+        Redes Sociales: Ilimitadas
+      </div>
+      <div class="offer__heading">
+        Minutos/SMS: Ilimitados
+      </div>
+    </div>
+    <div class="offer__imgHeader" v-if='chipName == `at&t`'>
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew3.png`)" :alt="`${chipName} image`" />
+    </div>
+    <div class="offer__heading" v-else>
       Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:
     </div>
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew4.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew.png`)" :alt="`${chipName} image`" />
     </div>
-    <div class="offer__heading">
+    <br v-if='chipName == `at&t`'>
+    <div class="offer__imgHeader" v-if='chipName == `at&t`'>
+      <img :src="require(`~/assets/img/attNew5.png`)" :alt="`${chipName} image`" />
+    </div>
+    <div  class="offer__heading" v-else>
       Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:
     </div>
     <div class="offer__img">
@@ -140,12 +164,23 @@ export default {
 
 .offer {
   @include containerStyle;
+  justify-content: center;
 
   &__heading {
     @include headingStyle;
   }
 
   &__img {
+    flex: 0 0 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__imgHeader {
+    display: flex;
+    justify-content: center;
     flex: 0 0 50%;
 
     img {
