@@ -17,8 +17,9 @@
         Minutos/SMS: Ilimitados
       </div>
     </div>
-    <div class="offer__imgHeader" v-if='false'>
-      <img  :src="require(`~/assets/img/attNew3.png`)" :alt="`${chipName} image`" />
+    <div class="offer__imgHeader" v-if='chipName != `movistar`'>
+      <img v-if='chipName == `unefon`' :src="require(`~/assets/img/headerUne.jpg`)" :alt="`${chipName} image`" />
+      <img v-else :src="require(`~/assets/img/hedaerAtt.jpg`)" :alt="`${chipName} image`" />
     </div>
 <!--    <div class="offer__heading" v-else>-->
 <!--      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:-->
