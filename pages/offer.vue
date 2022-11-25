@@ -25,7 +25,7 @@
 <!--      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:-->
 <!--    </div>-->
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew34.jpg`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew35.jpg`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew3.jpg`)" :alt="`${chipName} image`" />
     </div>
