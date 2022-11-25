@@ -17,27 +17,27 @@
         Minutos/SMS: Ilimitados
       </div>
     </div>
-    <div class="offer__imgHeader" v-if='chipName == `at&t`'>
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew3.png`)" :alt="`${chipName} image`" />
+    <div class="offer__imgHeader" v-if='false'>
+      <img  :src="require(`~/assets/img/attNew3.png`)" :alt="`${chipName} image`" />
     </div>
-    <div class="offer__heading" v-else>
-      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:
-    </div>
+<!--    <div class="offer__heading" v-else>-->
+<!--      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:-->
+<!--    </div>-->
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew4.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew34.jpg`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
-      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew3.jpg`)" :alt="`${chipName} image`" />
     </div>
-    <br v-if='chipName == `at&t`'>
-    <div class="offer__imgHeader" v-if='chipName == `at&t`'>
-      <img :src="require(`~/assets/img/attNew7.png`)" :alt="`${chipName} image`" />
-    </div>
-    <div  class="offer__heading" v-else>
-      Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:
-    </div>
+    <br >
+<!--    <div class="offer__imgHeader" v-if='chipName != `movistar`'>-->
+<!--      <img :src="require(`~/assets/img/attNew7.png`)" :alt="`${chipName} image`" />-->
+<!--    </div>-->
+<!--    <div  class="offer__heading" v-else>-->
+<!--      Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:-->
+<!--    </div>-->
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew6.png`)" :alt="`${chipName} image`" />
-      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew2.png`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew24.jpg`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefon4.jpg`)" :alt="`${chipName} image`" />
     </div>
 
 <!--    <div class="offer__info">-->
