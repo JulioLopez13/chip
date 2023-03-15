@@ -25,9 +25,9 @@
 <!--      Te recomendamos realizar tu recarga de $200.00 MXN para obtener los siguientes beneficios:-->
 <!--    </div>-->
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew35.jpg`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew11.jpg`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
-      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew3.jpg`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew11.jpg`)" :alt="`${chipName} image`" />
     </div>
     <br >
 <!--    <div class="offer__imgHeader" v-if='chipName != `movistar`'>-->
@@ -37,7 +37,7 @@
 <!--      Esta oferta la tendras si conservas tu mismo número al hacer tu portabilidad con nosotros:-->
 <!--    </div>-->
     <div class="offer__img">
-      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew24.jpg`)" :alt="`${chipName} image`" />
+      <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew12.jpg`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefon4.jpg`)" :alt="`${chipName} image`" />
     </div>
 
