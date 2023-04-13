@@ -17,8 +17,9 @@
         Minutos/SMS: Ilimitados
       </div>
     </div>
-    <div class="offer__imgHeader" v-if='chipName != `movistar`'>
+    <div class="offer__imgHeader" >
       <img v-if='chipName == `unefon`' :src="require(`~/assets/img/headerUne.jpg`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/headerMovi.jpg`)" :alt="`${chipName} image`" />
       <img v-else :src="require(`~/assets/img/hedaerAtt.jpg`)" :alt="`${chipName} image`" />
     </div>
 <!--    <div class="offer__heading" v-else>-->
