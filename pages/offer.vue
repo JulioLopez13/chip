@@ -26,7 +26,7 @@
 <!--    </div>-->
     <div class="offer__img">
       <img v-if='chipName == `at&t`' :src="require(`~/assets/img/attNew11.jpg`)" :alt="`${chipName} image`" />
-      <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/${chipName}.png`)" :alt="`${chipName} image`" />
+      <img v-else-if='chipName == `movistar`' :src="require(`~/assets/img/movistar1.jpg`)" :alt="`${chipName} image`" />
       <img v-else-if='chipName == `unefon`' :src="require(`~/assets/img/unefonNew11.jpg`)" :alt="`${chipName} image`" />
     </div>
     <br >
